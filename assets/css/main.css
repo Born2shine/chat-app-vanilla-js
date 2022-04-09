@@ -1,0 +1,191 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background: url('../images/bg.jpeg') center/cover no-repeat;
+    height: 100vh;
+}
+
+.main-wrapper .road{
+    width: 100vw;
+    height: 100px;
+    background: #373f42;
+    position: absolute;
+    bottom: 20px;
+}
+.main-wrapper .road::before{
+    content: "";
+    width: 76.4%;
+    height: 2px;
+    background: #e0dfdf;
+    top: 5px;
+    left: 170px;
+    position: absolute;
+}
+.main-wrapper .road::after{
+    content: "";
+    width: 98.5%;
+    height: 2px;
+    background: #e0dfdf;
+    bottom: 5px;
+    left: 10px;
+    position: absolute;
+}
+.main-wrapper .road .slash-line{
+    display: block;
+    content: "";
+    width: 87.5%;
+    height: 1px;
+    top: 50%;
+    left: 90px;
+    position: absolute;
+    border: 1px dashed #cacaca;
+}
+
+.main-wrapper .road-right{
+    width: 12vw;
+    height: 81.5vh;
+    background: #373f42;
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    top: 0;
+}
+.main-wrapper .road-right::before{
+    content: "";
+    width: 2px;
+    height: 64vh;
+    background: #e0dfdf;
+    top: 119px;
+    bottom: -10px;
+    left: 10px;
+    position: absolute;
+    z-index: 5;
+}
+.main-wrapper .road-right::after{
+    content: "";
+    width: 2px;
+    height: 95vh;
+    background: #e0dfdf;
+    bottom: -93px;
+    right: 10px;
+    position: absolute;
+}
+
+.main-wrapper .road-right .slash-line{
+    display: block;
+    content: "";
+    width: 2px;
+    height: 79vh;
+    top: 68px;
+    left: 50%;
+    position: absolute;
+    border: 1px dashed #cacaca;
+}
+.main-wrapper .road-top{
+    width: 88vw;
+    height: 130px;
+    background: #373f42;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    top: 0;
+}
+.main-wrapper .road-top::before{
+    content: "";
+    width: 98.5vw;
+    height: 2px;
+    background: #e0dfdf;
+    top: 5px;
+    bottom: -10px;
+    left: 10px;
+    position: absolute;
+    z-index: 5;
+}
+.main-wrapper .road-top::after{
+    content: "";
+    width: 76.3vw;
+    height: 2px;
+    background: #e0dfdf;
+    bottom: 9px;
+    left: 170px;
+    position: absolute;
+}
+.main-wrapper .road-top .slash-line{
+    display: block;
+    content: "";
+    width: 87.5vw;
+    height: 2px;
+    top: 50%;
+    left: 90px;
+    position: absolute;
+    border: 1px dashed #cacaca;
+}
+
+.main-wrapper .road-left{
+    width: 180px;
+    height: 61.5vh;
+    background: #373f42;
+    position: absolute;
+    top:20%;
+    left: 0;
+    z-index: 8;
+}
+
+.main-wrapper .road-left::before{
+    content: "";
+    width: 2px;
+    height: 94.9vh;
+    background: #e0dfdf;
+    top: -124px;
+    left: 10px;
+    position: absolute;
+    z-index: 5;
+}
+
+.main-wrapper .road-left::after{
+    content: "";
+    width: 2px;
+    height: 64.3vh;
+    background: #e0dfdf;
+    top: -11px;
+    right: 10px;
+    position: absolute;
+}
+
+.main-wrapper .road-left .slash-line{
+    display: block;
+    content: "";
+    width: 2px;
+    height: 79vh;
+    left: 50%;
+    top: -64px;
+    position: absolute;
+    border: 1px dashed #cacaca;
+}
+.main-wrapper .car{
+    position: absolute;
+    z-index: 10;
+    width: 30px;
+    bottom: 20px;
+    left: 50px;
+    right: inherit;
+    transform: rotate(90deg);
+}
+
+.rotate360{
+    transform: rotate(360deg) !important;
+}
+
+.rotate270{
+    transform: rotate(270deg) !important;
+}
+.carLeft{
+    top: 20px !important;
+}
+
+

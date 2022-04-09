@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <title>Javascript</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .cards{
+            margin: 20px;
+            display: flex;
+            gap: 0 20px;
+            display: none;
+        }
+        .cards .card{
+            width: 100px;
+            height: 100px;
+            border: 2px solid teal;
+        }
+        /* .cards #card-3{
+            order: -4
+        }
+        .cards #card-1{
+            order: -2
+        }
+        .cards #card-2{
+            order: -3
+        } */
+        li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .navbar{
+            position: absolute;
+            top: 0;
+            width: 20%;
+            height: 100vh;
+            background: #131212;
+            color: #fff;
+            transition: all .3s linear;
+            transform: translateX(-100%);
+        }
+        .translateZero{
+            transform: translate(0);
+        }
+        .navbar .logo{
+            border-bottom: 1px solid aliceblue;
+            padding: 20px;
+        }
+        nav ul{
+            margin-left: 20px;
+        }
+        nav ul li{
+            margin: 20px 0;
+        }
+        nav ul li a{
+            font-family: Arial, Helvetica, sans-serif;
+            color: aliceblue;
+        }
+        .menu-btn{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            /* display: none; */
+        }
+        .close-btn{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- <div class="cards">
+        <div class="card" id="card-1"></div>
+        <div class="card card-22" id="card-2"></div>
+        <div class="card" id="card-3"></div>
+        <div class="card" id="card-4"></div>
+    </div>
+
+    <div id="box">  </div> -->
+
+
+    <!-- <div> Copyright <span id="year">  </span> </div> -->
+
+    <!-- <div class="navbar" id="nav">
+        <div class="logo">P2P WAY</div>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Sales</a></li>
+                <li><a href="#">Booking</a></li>
+                <li><a href="#">Withdrawal</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+    <span class="menu-btn"> <i class="fa-solid fa-bars"></i> </span>
+    <span class="close-btn"> <i class="fa-solid fa-xmark"></i> </span> -->
+    
+ <script lang="javascript" type="text/javascript">
+
+// let card_1 = document.getElementById("card-1")
+// let card_2 = document.querySelector(".card-22")
+// let card_3 = document.getElementById("card-3")
+// let card_4 = document.querySelector("#card-4")
+
+// card_1.style.background = 'teal'
+// card_2.style.background = 'pink'
+// card_3.style.background = 'grey'
+// card_4.style.background = 'blue'
+
+// card_2.style.marginTop = "20px"
+
+// card_3.style.order = "-4"
+// card_1.style.order = "-2"
+// card_2.style.order = "-3"
+
+// let box = document.getElementById("box")
+
+// // box.style.width = "100px"
+// box.style.height = "100px"
+// box.style.border = "2px solid red"
+
+// let h1 = document.createElement("h1")
+
+// let someText = document.createTextNode("JAVASCRIPT")
+
+
+// h1.appendChild(someText)
+// box.appendChild(h1)
+// box.style.display = "inline-block"
+// // h1.style.fontSize = "10px"
+
+
+
+
+// document.getElementById
+// document.getElementsByClassName
+// document.getElementsByName
+// document.getElementsByTagName
+// document.querySelector
+// document.querySelectorAll
+
+
+
+
+// let menuBtn = document.querySelector(".menu-btn")
+// let closeBtn = document.querySelector(".close-btn")
+// let navbar = document.getElementById("nav")
+
+
+
+
+// menuBtn.addEventListener("click", function(){
+//     navbar.classList.add("translateZero")
+
+//     closeBtn.style.display = 'block'
+//     menuBtn.style.display = "none"
+// })
+
+// closeBtn.addEventListener("click", function(){
+//     // alert("Yes")
+//     navbar.classList.remove("translateZero")
+//     menuBtn.style.display = "block"
+//     closeBtn.style.display = "none"
+// })
+
+// let cards = document.querySelector(".cards")
+
+// setTimeout(function(){
+//     cards.style.display = "flex"
+// }, 5000)
+
+
+
+
+
+
+
+
+
+
+
+    //  let domElement = document.getElementById('year')
+
+    //  let year = new Date().getFullYear()
+
+    //  domElement.innerHTML = year
+
+    //  document.write("Here is my first javascript code")
+    //  window.alert("Another method to print to the screen")
+    //  alert(4 + 5)
+    //  console.log("here is another output")
+    // innerHTML
+    // document.getElementById("demo").innerHTML = "FRONT END DEVELOPMENT"
+
+    // 1. let 
+    // 2. var
+    // 3. const 
+
+    // let age = 20;
+    // var name = "Thomas";
+    // var name = 'Emmanuel';
+    // const ip = "192.68.8.10";
+    // const pie = 3.142
+    // var answer = "A";
+
+    // var my_array = ['Ade', 23, 'D', [12, 'An array'], true, {'student_01': 'Ade'} ];
+    // var is_open = false;
+
+    // var obj = {
+    //     name: "Buchi",
+    //     class: 'Front-end Dev',
+    //     IDE: {
+    //         mat_no: 'PSC1426032'
+    //     }
+    // }
+
+
+    // Types of data type
+    // Integer
+    // String JKGGkh'.jhsdhd$#&3635737./
+    // Char
+    // Float/Double
+    // Array
+    // Boolean
+    // Object
+
+    // OPERATORS  (Assigment, Arithmetic, Logical, Increment, Decrement, Concatenation)
+    // =
+    // +
+    // -
+    // /
+    // *
+    // %
+    // **  
+    
+    // console.log(4 % 2)
+
+    // 1. declare variable
+    // 2. Assign value to these variables
+    // 3. Output the answer
+
+    // let x = 2700;
+    // let y = 57000;
+    // let sum = x + y; 
+    // console.log(sum)
+    // pier2
+
+    // const PIE = 3.142;
+    // var r = 5;
+    // var area_of_a_circle = PIE * (r ** 2)
+
+    // console.log(area_of_a_circle)
+
+    // Write a JS program to calculate 
+    // 1. Area of a trapezium
+    // 2. The values of the unknown in ALMIGHTY FORMULAR
+
+    // 1/2 (a + b ) h
+
+    // var a = 4;
+    // var b = 3;
+    // var h = 6;
+
+    // var area = ((a + b) * h) / 2
+
+    // // console.log(area)
+
+    // var b = 3;
+    // var a = 4;
+    // var c = -1;
+
+    // var quad_formular = (- b + Math.sqrt((b**2) - (4 * a * c) ) ) / (2 * a)
+
+    // console.log(quad_formular)
+
+    // var surname = "Odoh";
+    // var firstname = "Friday"
+    // +
+    // console.log(surname + " " + firstname)
+
+    // var b = 'Ade'
+    // var a = 20
+    // let x =  b + a + 5;
+            //  Ade205
+    // let y =  a + 5 + b; 
+            //  25Ade
+
+    // var x = 5;
+    // var y = 10
+    // var sum  = x + y;
+    // console.log(sum)
+    // increment ++
+    // decrement --
+    // var x = 5
+    // x++
+
+
+    // var z = x++;
+
+    // var y = ++x
+
+    // var w = 5
+
+    // var t = --w
+
+    // console.log(z)
+
+
+    // FUNCTION
+
+    // function printName(firstname, lastname){
+
+    //     console.log(firstname + ' ' + lastname)
+    //     // return firstname + lastname
+    // }
+    
+    // printName("Odoh", "Friday")
+    // console.log(printName())
+
+    // var username = "xcode360"
+    // var password = '123456'
+
+    // function Login(username, password){
+    //     // validation
+    //     check if the username = database.username
+    //     check if the password = database.password
+    //     // redirect to the intending page
+    //     redirect to dashboard
+    // }
+        // pie r 2
+        // const pie = 3.142
+    
+    // function calculateAreaOfCircle(radius){
+    //     const pie = 3.142
+    //     let area = pie * radius ** 2
+    //     return area
+    // }
+    
+    // let A = calculateAreaOfCircle(4)
+    // console.log(A)
+
+    
+    // function Sum(a,b){
+    //     return a + b
+    // }
+
+    // console.log(Sum(5,90))
+    // // console.log(Sum(6,540))
+
+    // // A function that will print this
+    // // My name is {Odoh Friday}. I love coding {Javascript}
+
+    // function printSomeText(names, language){
+    //     return "My name is " + names + ". " + "I love coding " + language
+    // }
+
+    // let showText = printSomeText("Odoh Friday", "Javascript")
+    // console.log(showText)
+
+    // // 1/2(a + b) h
+        
+
+    // function Area(a, b, h){
+    //     return ((a + b) * h) / 2
+    // }
+
+    // let result = Area(5, 2, 2)
+    // console.log(result)
+
+    // let domElement = document.getElementById('demo')
+
+
+    // function calculateAreaOfCircle(radius, pie){
+    //     let area = pie * (radius **2)
+
+    //     // // return area
+    //     // console.log(area)
+    //     domElement.innerHTML = area
+
+    //     domElement.style.color = "red"
+    //     domElement.style.textAlign = 'center'
+    // }
+
+    // calculateAreaOfCircle(3, 3.142)
+
+    // let area = calculateAreaOfCircle(3, Math.PI)
+    
+    // console.log(3>5)
+    
+
+    // let a = 4;
+    // let b = 3;
+    // let c = -1;
+
+    // let s = Math.sqrt(16)
+    // console.log(s)
+
+    // const result1 = (-b + Math.sqrt(b**2 - (4*a*c)) ) / (2 * a)
+
+    function getResult(a, b, c){
+
+        var result = (-b + Math.sqrt(b**2 - (4*a*c)) ) / (2 * a)
+
+        return result
+        
+    }
+
+    // let answer = getResult(4, 3, -1)
+
+    // console.log(answer)
+
+    // console.log(result);
+
+    // var a = 6;
+    // var b = 10;
+
+    // var sum = a + b;
+
+    // console.log(sum)
+
+    // function addNumbers(num1, num2){
+    //     return num1 + num2
+    // }
+
+    // let result = addNumbers(1, 1)
+    
+    // console.log(result)
+
+    // COMPARISON, CONDITION, LOOP/ITERATION
+
+    // <, >, ==, ===, <=, >=, !=
+    // Boolean  true, false
+                // 1       0
+
+    // LOGICAL
+    // AND, OR, NOT
+
+    // let isButtonClicked = 0;
+
+    // let result = Boolean(isButtonClicked)
+
+    // console.log(result)
+    // let data = null;
+
+    // let dataType = typeof(data)
+
+    // console.log(dataType)
+
+    
+    
+    
+    // if(x == num){
+        //     console.log('Today is ' + day)
+        // }else{
+            //     console.log('The condition is not true')
+            // }
+    // let x = (num**2) / 72  
+    // var num = 12;
+    // let day = 'SaturDay'
+    
+    // if(num > (x + 20) ){
+    //     console.log('The result is true')
+    // }else if(day == 'Saturday'){
+    //     console.log('Today is ' + day)
+    // }else if(typeof(day) == 'string'){
+    //     console.log(day + ' is a string')
+    // }else{
+    //     console.log('None of the condition is true')
+    // }
+
+
+    // let day = new Date().getDay()
+
+
+
+    // if(day === 0){
+    //     console.log("Today is Sunday")
+    // }else if(day === 1){
+    //     console.log("Today is Monday")
+    // }else if(day === 2){
+    //     console.log("Today is Tuesday")
+    // }else if(day === 3){
+    //     console.log("Today is Wednesday")
+    // }else if(day === 4){
+    //     console.log("Today is Thursday")
+    // }else if(day === 5){
+    //     console.log("Today is Friday")
+    // }else if(day === 6){
+    //     console.log("Today is Saturday")
+    // }else{
+    //     console.log("Oops! an error occured")
+    // }
+
+    // 1 Write a program that will print [ Today is Saturday ] if
+    // The result from the function written is equal to the number representation of today
+    // Else print [The result from the function written is not equal to the number representation of today]
+
+    // let day = new Date().getDay()
+
+    // function addNumbers(x , y){
+    //     return x + y
+    // }
+
+    // let sum = addNumbers(4, 3)
+
+    // if(sum === day){
+    //     console.log('Today is Saturday')
+    // }else{
+    //     console.log('The result from the function written is not equal to ' + day)
+    // }
+
+    // Write a program that compares two functions
+    // And the result should be 'The result is true' if the comparison is true
+    // And 'The result is false' if the comparison is false
+
+    // function addNumbers(x, y){
+    //     return x + y
+    // }
+
+    // let sum = addNumbers(3, 5)
+
+    // function subtractNumbers(a, b){
+    //     return a - b
+    // }
+    // let difference = subtractNumbers(10, 2)
+
+    // if(sum === difference){
+    //     console.log('The result is true')
+    // }else{
+    //     console.log('The comparison is false')
+    // }
+
+    // Switch, Iteration/loop, array
+
+
+    // Write a program that prompt the user for task to perform
+    // When you run th program the user gets the following
+    // **. Please choose an operation to perform
+    // ****************************** 
+    // 1. sum                   *****
+    // 2. subtract              *****
+    // 3. multiplication        *****
+    // 4. division              *****
+    // 5. modulus               *****
+    // 6. exponential           *****
+    // 7. Area of trapezium     *****
+    // 8. Exit                  *****
+    // ******************************
+    // the user get an error message (Invalid Operation) if the value entered is not in the list of the given operations and if the value is not a number
+    // The user gets to enter the variables needed to perform the operations (just two variables) except for the last operation i.e area of a trapezium
+    // Print an error message if the value entered by the user is not a number
+    // Once an operation is executed the program should restart 
+    // The program should end only when the user enters 8 after the prompt message
+    // ** Print number of operations executed and the time spent in running the whole operations
+    
+
+    // var Car = {
+    //     name: 'Toyata',
+    //     year: 2007,
+    //     model: 'Corolla'
+    // }
+
+    // for(let car in Car){
+    //     console.log(car)
+    // }
+
+    // const cars = ["BMW", "Volvo", "Mini"];
+
+    // let text = "";
+    // for (let x of cars) {
+    //     console.log(x)
+    // }
+    
+    // for (let i = 0; i < 10; i++) {
+    //     if (i === 3) { break; }
+    //     console.log("The number is " + i + "<br>");
+    // }
+
+
+
+    // SWITCH STATEMENT, ITERATIONS (for, for in, forEach, for of, while)
+
+    // grade < 45 = E, grade > 44 < 50 = D, grade > 49 < 60 = C, grade > 59 < 70 = B, grade > 69 = A 
+
+    
+    // if(grade < 45){
+        //     console.log('Your grade is E')
+        // }else if(grade > 44 && grade < 50){
+            //     console.log('Your grade is D')
+            // }else if(grade > 49 && grade < 60){
+                //     console.log('Your grade is C')
+                // }else if(grade > 59 && grade < 70){
+                    //     console.log('Your grade is B')
+                    // }else if(grade > 69){
+                        //     console.log('Your grade is A')
+                        // }
+  
+
+    // let score = 10;
+
+    // switch (score) {
+    //     case 5:
+    //         console.log("Your value is equal to "+ score )
+    //         break;
+    //     case 10:
+    //     console.log("Your value is equal to "+ score )
+    //     break;
+    //     default:
+    //         console.log("Invalid input ")
+    // }
+
+    // let grade = 45;
+
+    // switch(grade){
+    //     case grade < 45:
+    //         console.log('Your grade is E');
+    //     break;
+    //     case (grade > 44 && grade < 50):
+    //         console.log('Your grade is D');
+    //     break;
+    //     case (grade > 49 && grade < 60):
+    //         console.log('Your grade is C');
+    //     break;
+    //     case (grade > 59 && grade < 70):
+    //         console.log('Your grade is B');
+    //     break;
+    //     case (grade > 69):
+    //         console.log('Your grade is A');
+    //     default:
+    //         console.log("Invalid input")  
+    // }
+    
+    // let char = 'B'
+    // switch (char) {
+    //     case 'A':
+    //         console.log('Your grade is ' + char)
+    //         break;
+    //     case 'B':
+    //         console.log('Your grade is '+ char)
+    //     break;
+    //     default:
+    //         console.log('Invalid grade');
+    // }
+
+    // let Car = {
+    //     name: 'Tesla',
+    //     year: 2021,
+    //     model: 'BMW'
+    // }
+
+    // console.log(Car.model)
+
+    // for(let item in Car){
+    //     console.log('Key:' + item + ' value: ' + Car[item])
+    // }
+    
+    // let myArr = [2, 12, 7, 5, 8, 15]
+
+    // for(var x in myArr){
+    //     console.log(myArr[x])
+    // }
+
+    // for(let data in myArr){
+    //     console.log(myArr[data])
+    // }
+
+    // PUSH, UNSHIFT, POP, SHIFT
+    // myArr.push(10)
+    // myArr.push(4)
+
+    // myArr.unshift(50)
+
+    // myArr.shift()
+    
+    // 2, 17, 7, 5, 15, 15
+    
+    // console.log(myArr[3])
+    // console.log(myArr.length)
+    
+    // break
+    // continue
+    
+    // console.log(myArr)
+    // myArr.pop()
+    // myArr.shift()
+    // myArr.push([67, 24, true])
+
+    // let newArr = []
+
+    // for(let i = 0; i < myArr.length; i++){
+    //     var x = myArr[i]
+
+    //     if(x > 6 && x < 13){
+    //         let sum = x + 5;
+    //         newArr.push(sum)
+    //     }
+
+    //     console.log(x)
+
+    // }
+
+    // console.log(newArr)
+
+    // for(let i = 1; i <= 12 ; i++){
+    //     console.log('2 x ' + i + ' = ' + 2 * i)
+    // }
+
+    // window.alert('This is an alert')
+
+    // var num = prompt("Enter a value")
+
+    // var text = 'It\'s a boy'
+
+    // console.log(text)
+
+    // let totalOperations = 0;
+
+    // function addNumbers(x , y){
+    //     return x + y
+    // }
+
+    // var x = prompt("Please choose an operation you want to perform \n 1. Sum \n 2. Subtract")
+
+    // var x = prompt("Enter num 1")
+    // var y = prompt("Enter num 2")
+    
+    // x = parseInt(x)
+    // x = parseFloat(x)
+    // y = parseFloat(y)
+
+    // if(x === 1){
+    //     var a = prompt("Enter the 1 value")
+    //     var b = prompt("Enter the 2 value")
+    //     a = parseFloat(a)
+
+    //    let sum = addNumbers(a, b)
+
+    //    ++totalOperations
+
+    //    console.log(sum)
+
+    // }
+
+
+    // console.log(typeof(x))
+
+    // console.log(x + y)
+
+    // console.log(parse)
+
+    // var span = document.getElementById("dom")
+
+    // var el = document.createElement('p')
+
+    // var text = document.createTextNode("posted by")
+    // el.appendChild(text)
+    // span.appendChild(el)
+
+
+
+
+
+
+    // 1. how find odd or even number
+    // 2. how to check all inputs
+    // 3. Output odd numbers and even numbers from the inputs
+
+
+    // let check = 6 % 3
+    // if(12 % 3 === 0){
+    //     console.log("The input an even number")
+    // }else{
+    //     console.log("The input is an odd number")
+    // }
+
+    // let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+    // let odd = []
+    // let even = []
+
+
+    // for(let y = 0; y < numbers.length; y++){
+    //      let x = numbers[y]
+    //      if(x % 2 === 0){
+    //          even.push(x)
+    //      }else{
+    //         odd.push(x)
+    //      }
+    // }
+
+    // console.log(odd)
+    // console.log(even)
+
+
+
+
+
+
+
+    
+    
+
+ </script>   
+</body>
+</html>

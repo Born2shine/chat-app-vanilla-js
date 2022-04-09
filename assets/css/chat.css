@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    display: inline-block;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: .3rem;
+  }
+  
+  ::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #d5d5d6;
+    border: 1px solid #c8cbce;
+  }
+
+.chat-wrapper .chat-container{
+    width: 42%;
+    height: 98vh;
+    margin: 10px auto;
+    border: 2px solid darkblue;
+    border-radius: 20px;
+    position: relative;
+}
+.chat-wrapper .chat-container .hero{
+    display: flex;
+    justify-content: space-between;
+    background: #1f1d1d;
+    color: aliceblue;
+    align-items: center;
+    padding: 5px;
+    border-radius: 20px 20px 0 0;
+}
+.chat-wrapper .chat-container .hero .title{
+    padding-left: 10px;
+}
+.chat-wrapper .chat-container .hero .avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+.chat-wrapper .chat-container .chats{
+    height: 85vh;
+    overflow-y: scroll;
+    /* overflow: hidden; */
+}
+.chat-wrapper .chat-container .chats .messages{
+    clear: both;
+    display: table;
+    content: "";
+}
+.chat-wrapper .chat-container .chats ul .message{
+    margin: 10px;
+    background: teal;
+    width: 40%;
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 14px;
+}
+/* .chat-wrapper .chat-container .chats ul .message:nth-child(even){
+    float: right;
+    margin-top: 2rem;
+} */
+.chat-wrapper .chat-container .send-message{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    /* grid-template-columns: 1fr 100px; */
+}
+.chat-wrapper .chat-container .send-message .msg{
+    padding: 10px;
+    font-family: inherit;
+    border: none;
+    border-radius: 0 0 0 20px;
+    outline: 1px solid grey;
+    width: 250px;
+}
+.chat-wrapper .chat-container .send-message .btn{
+    border: none;
+    background: #2f4eff;
+    color: #fff;
+    width: 100px;
+    border-radius: 0 0 20px 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+    .chat-wrapper .chat-container .send-message .msg{
+        width: 470px;
+    } 
+}
